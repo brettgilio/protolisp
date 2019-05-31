@@ -3,6 +3,8 @@
 
 #include <editline/readline.h>
 
+#include "mpc.h"
+
 // lobal array buffer of 2048 characters.
 static char input[2048];
 
