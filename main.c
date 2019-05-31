@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Declare a buffer for user input of size 2048
+#include <editline/readline.h>
+
+// lobal array buffer of 2048 characters.
 static char input[2048];
 
 int
