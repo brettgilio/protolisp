@@ -14,13 +14,16 @@ main(int argc, char** argv) {
   while(1) {
 
     // Write prompt
-    fputs("plisp >> ", stdout);
+    char* input = readline("plisp >> ");
 
-    // Read a line of user input of maximum size 2048
-    fgets(input, 2048, stdin);
+    // Add input to history
+    add_history(input);
 
     // Echo input back to user
-    printf("This is %s", input);
+    printf("This is %s\n", input);
+
+    // Free retrieved input memory
+    free(input);
   }
 
   return 0;
